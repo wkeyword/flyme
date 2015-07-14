@@ -1,0 +1,10 @@
+kernel=zImage
+ramdisk=RAMDISK
+page_size=2048
+kernel_size=3526412
+ramdisk_size=870348
+base_addr=0x40000000
+kernel_offset=0x00008000
+ramdisk_offset=0x01000000
+tags_offset=0x00000100
+cmd_line="console=ttySAC2,115200"
