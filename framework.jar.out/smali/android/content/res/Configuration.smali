@@ -2920,74 +2920,12 @@
     .line 1122
     or-int/lit16 v0, v0, 0x1000
 
+    .line 1124
+    :cond_12
     invoke-static {p0, p1, v0}, Landroid/content/res/Configuration$FlymeInject;->diff(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
 
     move-result v0
 
-    return v0
-
-    .line 1124
-    :cond_12
-    iget-object v3, p1, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
-
-    if-eqz v3, :cond_15
-
-    iget-object v3, p0, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
-
-    if-eqz v3, :cond_13
-
-    iget-object v3, p0, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
-
-    iget-object v4, p1, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
-
-    invoke-virtual {v3, v4}, Landroid/content/res/ThemeConfig;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_15
-
-    .line 1126
-    :cond_13
-    const/high16 v3, 0x100000
-
-    or-int/2addr v0, v3
-
-    .line 1127
-    iget-object v3, p1, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
-
-    invoke-virtual {v3}, Landroid/content/res/ThemeConfig;->getFontPkgName()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 1128
-    .local v2, "fontPkgName":Ljava/lang/String;
-    iget-object v3, p0, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
-
-    if-eqz v3, :cond_14
-
-    if-eqz v2, :cond_15
-
-    iget-object v3, p0, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
-
-    invoke-virtual {v3}, Landroid/content/res/ThemeConfig;->getFontPkgName()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_15
-
-    .line 1130
-    :cond_14
-    const/high16 v3, 0x200000
-
-    or-int/2addr v0, v3
-
-    .line 1133
-    .end local v2    # "fontPkgName":Ljava/lang/String;
-    :cond_15
     return v0
 .end method
 
