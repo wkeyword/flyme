@@ -65,7 +65,7 @@
 
     const/4 v6, 0x5
 
-    .line 754
+    .line 760
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer$TimeBucket;
@@ -171,41 +171,41 @@
 
     const/4 v6, 0x0
 
-    .line 740
+    .line 746
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 772
+    .line 778
     new-instance v4, Lcom/android/server/wifi/WifiNative$ScanSettings;
 
     invoke-direct {v4}, Lcom/android/server/wifi/WifiNative$ScanSettings;-><init>()V
 
     iput-object v4, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
 
-    .line 773
+    .line 779
     iget-object v4, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
 
     iput v8, v4, Lcom/android/server/wifi/WifiNative$ScanSettings;->max_ap_per_scan:I
 
-    .line 774
+    .line 780
     iget-object v4, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
 
     const/16 v5, 0x1388
 
     iput v5, v4, Lcom/android/server/wifi/WifiNative$ScanSettings;->base_period_ms:I
 
-    .line 775
+    .line 781
     iget-object v4, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
 
     iput v8, v4, Lcom/android/server/wifi/WifiNative$ScanSettings;->report_threshold:I
 
-    .line 777
+    .line 783
     iget-object v4, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
 
     new-array v5, v7, [Lcom/android/server/wifi/WifiNative$BucketSettings;
 
     iput-object v5, v4, Lcom/android/server/wifi/WifiNative$ScanSettings;->buckets:[Lcom/android/server/wifi/WifiNative$BucketSettings;
 
-    .line 778
+    .line 784
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -218,27 +218,27 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 779
+    .line 785
     new-instance v0, Lcom/android/server/wifi/WifiNative$BucketSettings;
 
     invoke-direct {v0}, Lcom/android/server/wifi/WifiNative$BucketSettings;-><init>()V
 
-    .line 780
+    .line 786
     .local v0, "bucketSettings":Lcom/android/server/wifi/WifiNative$BucketSettings;
     iput v2, v0, Lcom/android/server/wifi/WifiNative$BucketSettings;->bucket:I
 
-    .line 781
+    .line 787
     iput v6, v0, Lcom/android/server/wifi/WifiNative$BucketSettings;->report_events:I
 
-    .line 782
+    .line 788
     new-array v4, v7, [Lcom/android/server/wifi/WifiNative$ChannelSettings;
 
     iput-object v4, v0, Lcom/android/server/wifi/WifiNative$BucketSettings;->channels:[Lcom/android/server/wifi/WifiNative$ChannelSettings;
 
-    .line 783
+    .line 789
     iput v6, v0, Lcom/android/server/wifi/WifiNative$BucketSettings;->num_channels:I
 
-    .line 784
+    .line 790
     const/4 v3, 0x0
 
     .local v3, "j":I
@@ -249,23 +249,23 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 785
+    .line 791
     new-instance v1, Lcom/android/server/wifi/WifiNative$ChannelSettings;
 
     invoke-direct {v1}, Lcom/android/server/wifi/WifiNative$ChannelSettings;-><init>()V
 
-    .line 786
+    .line 792
     .local v1, "channelSettings":Lcom/android/server/wifi/WifiNative$ChannelSettings;
     iget-object v4, v0, Lcom/android/server/wifi/WifiNative$BucketSettings;->channels:[Lcom/android/server/wifi/WifiNative$ChannelSettings;
 
     aput-object v1, v4, v3
 
-    .line 784
+    .line 790
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 788
+    .line 794
     .end local v1    # "channelSettings":Lcom/android/server/wifi/WifiNative$ChannelSettings;
     :cond_0
     iget-object v4, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
@@ -274,12 +274,12 @@
 
     aput-object v0, v4, v2
 
-    .line 778
+    .line 784
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 792
+    .line 798
     .end local v0    # "bucketSettings":Lcom/android/server/wifi/WifiNative$BucketSettings;
     .end local v3    # "j":I
     :cond_1
@@ -297,7 +297,7 @@
     .param p1, "x0"    # Lcom/android/server/wifi/WifiScanningServiceImpl$1;
 
     .prologue
-    .line 740
+    .line 746
     invoke-direct {p0}, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;-><init>()V
 
     return-void
@@ -310,14 +310,14 @@
     .prologue
     const/4 v10, -0x1
 
-    .line 800
+    .line 806
     iget-object v3, p1, Landroid/net/wifi/WifiScanner$ScanSettings;->channels:[Landroid/net/wifi/WifiScanner$ChannelSpec;
 
-    .line 801
+    .line 807
     .local v3, "channels":[Landroid/net/wifi/WifiScanner$ChannelSpec;
     if-nez v3, :cond_0
 
-    .line 803
+    .line 809
     iget v9, p1, Landroid/net/wifi/WifiScanner$ScanSettings;->band:I
 
     # invokes: Lcom/android/server/wifi/WifiScanningServiceImpl;->getChannelsForBand(I)[Landroid/net/wifi/WifiScanner$ChannelSpec;
@@ -325,11 +325,11 @@
 
     move-result-object v3
 
-    .line 806
+    .line 812
     :cond_0
     if-nez v3, :cond_1
 
-    .line 808
+    .line 814
     const-string v9, "WifiScanningService"
 
     const-string v11, "No channels to scan!!"
@@ -338,17 +338,17 @@
 
     move v8, v10
 
-    .line 849
+    .line 855
     :goto_0
     return v8
 
-    .line 812
+    .line 818
     :cond_1
     sget-object v9, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mTimeBuckets:[Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer$TimeBucket;
 
     array-length v8, v9
 
-    .line 814
+    .line 820
     .local v8, "mostFrequentBucketIndex":I
     move-object v0, v3
 
@@ -364,7 +364,7 @@
 
     aget-object v4, v0, v6
 
-    .line 815
+    .line 821
     .local v4, "desiredChannelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     iget-object v9, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mChannelToBucketMap:Ljava/util/HashMap;
 
@@ -380,7 +380,7 @@
 
     if-eqz v9, :cond_2
 
-    .line 816
+    .line 822
     iget-object v9, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mChannelToBucketMap:Ljava/util/HashMap;
 
     iget v11, v4, Landroid/net/wifi/WifiScanner$ChannelSpec;->frequency:I
@@ -399,26 +399,26 @@
 
     move-result v2
 
-    .line 817
+    .line 823
     .local v2, "bucket":I
     if-ge v2, v8, :cond_2
 
-    .line 818
+    .line 824
     move v8, v2
 
-    .line 814
+    .line 820
     .end local v2    # "bucket":I
     :cond_2
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 823
+    .line 829
     .end local v4    # "desiredChannelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     :cond_3
     const/4 v1, -0x1
 
-    .line 824
+    .line 830
     .local v1, "bestBucketIndex":I
     const/4 v5, 0x0
 
@@ -430,12 +430,12 @@
 
     if-ge v5, v9, :cond_4
 
-    .line 825
+    .line 831
     sget-object v9, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mTimeBuckets:[Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer$TimeBucket;
 
     aget-object v2, v9, v5
 
-    .line 826
+    .line 832
     .local v2, "bucket":Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer$TimeBucket;
     iget v9, v2, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer$TimeBucket;->periodMinInSecond:I
 
@@ -453,15 +453,15 @@
 
     if-ge v9, v11, :cond_5
 
-    .line 829
+    .line 835
     move v1, v5
 
-    .line 834
+    .line 840
     .end local v2    # "bucket":Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer$TimeBucket;
     :cond_4
     if-ge v8, v1, :cond_7
 
-    .line 835
+    .line 841
     move-object v0, v3
 
     array-length v7, v0
@@ -473,7 +473,7 @@
 
     aget-object v4, v0, v6
 
-    .line 836
+    .line 842
     .restart local v4    # "desiredChannelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     iget-object v9, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mChannelToBucketMap:Ljava/util/HashMap;
 
@@ -489,12 +489,12 @@
 
     invoke-virtual {v9, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 835
+    .line 841
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_3
 
-    .line 824
+    .line 830
     .end local v4    # "desiredChannelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     .restart local v2    # "bucket":Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer$TimeBucket;
     :cond_5
@@ -502,7 +502,7 @@
 
     goto :goto_2
 
-    .line 838
+    .line 844
     .end local v2    # "bucket":Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer$TimeBucket;
     :cond_6
     const-string v9, "WifiScanningService"
@@ -529,11 +529,11 @@
 
     goto/16 :goto_0
 
-    .line 840
+    .line 846
     :cond_7
     if-eq v1, v10, :cond_9
 
-    .line 841
+    .line 847
     move-object v0, v3
 
     array-length v7, v0
@@ -545,7 +545,7 @@
 
     aget-object v4, v0, v6
 
-    .line 842
+    .line 848
     .restart local v4    # "desiredChannelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     iget-object v9, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mChannelToBucketMap:Ljava/util/HashMap;
 
@@ -561,12 +561,12 @@
 
     invoke-virtual {v9, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 841
+    .line 847
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_4
 
-    .line 844
+    .line 850
     .end local v4    # "desiredChannelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     :cond_8
     const-string v9, "WifiScanningService"
@@ -593,10 +593,10 @@
 
     move v8, v1
 
-    .line 845
+    .line 851
     goto/16 :goto_0
 
-    .line 848
+    .line 854
     :cond_9
     const-string v9, "WifiScanningService"
 
@@ -624,7 +624,7 @@
 
     move v8, v10
 
-    .line 849
+    .line 855
     goto/16 :goto_0
 .end method
 
@@ -635,12 +635,12 @@
     .param p1, "settings"    # Landroid/net/wifi/WifiScanner$ScanSettings;
 
     .prologue
-    .line 858
+    .line 864
     invoke-direct/range {p0 .. p1}, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->getBestBucket(Landroid/net/wifi/WifiScanner$ScanSettings;)I
 
     move-result v6
 
-    .line 859
+    .line 865
     .local v6, "bucketIndex":I
     const/16 v17, -0x1
 
@@ -648,27 +648,27 @@
 
     if-ne v6, v0, :cond_0
 
-    .line 860
+    .line 866
     const-string v17, "WifiScanningService"
 
     const-string v18, "Ignoring invalid settings"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 861
+    .line 867
     const/16 v17, -0x1
 
-    .line 942
+    .line 948
     :goto_0
     return v17
 
-    .line 864
+    .line 870
     :cond_0
     move-object/from16 v0, p1
 
     iget-object v9, v0, Landroid/net/wifi/WifiScanner$ScanSettings;->channels:[Landroid/net/wifi/WifiScanner$ChannelSpec;
 
-    .line 865
+    .line 871
     .local v9, "desiredChannels":[Landroid/net/wifi/WifiScanner$ChannelSpec;
     move-object/from16 v0, p1
 
@@ -686,7 +686,7 @@
 
     if-nez v17, :cond_2
 
-    .line 869
+    .line 875
     :cond_1
     move-object/from16 v0, p1
 
@@ -699,22 +699,22 @@
 
     move-result-object v9
 
-    .line 870
+    .line 876
     if-nez v9, :cond_2
 
-    .line 872
+    .line 878
     const-string v17, "WifiScanningService"
 
     const-string v18, "No channels to scan!!"
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 873
+    .line 879
     const/16 v17, -0x1
 
     goto :goto_0
 
-    .line 878
+    .line 884
     :cond_2
     const-string v17, "WifiScanningService"
 
@@ -764,7 +764,7 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 881
+    .line 887
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
@@ -779,7 +779,7 @@
 
     aget-object v5, v17, v6
 
-    .line 882
+    .line 888
     .local v5, "bucket":Lcom/android/server/wifi/WifiNative$BucketSettings;
     iget v0, v5, Lcom/android/server/wifi/WifiNative$BucketSettings;->num_channels:I
 
@@ -795,7 +795,7 @@
 
     const/4 v2, 0x1
 
-    .line 884
+    .line 890
     .local v2, "added":Z
     :goto_1
     const-string v17, "WifiScanningService"
@@ -830,12 +830,12 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 886
+    .line 892
     new-instance v16, Ljava/util/HashSet;
 
     invoke-direct/range {v16 .. v16}, Ljava/util/HashSet;-><init>()V
 
-    .line 887
+    .line 893
     .local v16, "newChannels":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/net/wifi/WifiScanner$ChannelSpec;>;"
     move-object v3, v9
 
@@ -857,7 +857,7 @@
 
     aget-object v8, v3, v13
 
-    .line 889
+    .line 895
     .local v8, "desiredChannelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     const-string v17, "WifiScanningService"
 
@@ -885,10 +885,10 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 891
+    .line 897
     const/4 v11, 0x0
 
-    .line 892
+    .line 898
     .local v11, "found":Z
     iget-object v4, v5, Lcom/android/server/wifi/WifiNative$BucketSettings;->channels:[Lcom/android/server/wifi/WifiNative$ChannelSettings;
 
@@ -905,7 +905,7 @@
 
     aget-object v10, v4, v12
 
-    .line 893
+    .line 899
     .local v10, "existingChannelSpec":Lcom/android/server/wifi/WifiNative$ChannelSettings;
     iget v0, v8, Landroid/net/wifi/WifiScanner$ChannelSpec;->frequency:I
 
@@ -921,20 +921,20 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 894
+    .line 900
     const/4 v11, 0x1
 
-    .line 899
+    .line 905
     .end local v10    # "existingChannelSpec":Lcom/android/server/wifi/WifiNative$ChannelSettings;
     :cond_3
     if-nez v11, :cond_6
 
-    .line 900
+    .line 906
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v8}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 887
+    .line 893
     :goto_4
     add-int/lit8 v12, v13, 0x1
 
@@ -944,7 +944,7 @@
     .restart local v13    # "i$":I
     goto :goto_2
 
-    .line 882
+    .line 888
     .end local v2    # "added":Z
     .end local v4    # "arr$":[Lcom/android/server/wifi/WifiNative$ChannelSettings;
     .end local v8    # "desiredChannelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
@@ -957,7 +957,7 @@
 
     goto :goto_1
 
-    .line 892
+    .line 898
     .restart local v2    # "added":Z
     .restart local v4    # "arr$":[Lcom/android/server/wifi/WifiNative$ChannelSettings;
     .restart local v8    # "desiredChannelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
@@ -971,7 +971,7 @@
 
     goto :goto_3
 
-    .line 902
+    .line 908
     .end local v10    # "existingChannelSpec":Lcom/android/server/wifi/WifiNative$ChannelSettings;
     :cond_6
     const-string v17, "WifiScanningService"
@@ -1002,7 +1002,7 @@
 
     goto :goto_4
 
-    .line 906
+    .line 912
     .end local v4    # "arr$":[Lcom/android/server/wifi/WifiNative$ChannelSettings;
     .end local v8    # "desiredChannelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     .end local v11    # "found":Z
@@ -1044,7 +1044,7 @@
 
     if-le v0, v1, :cond_c
 
-    .line 909
+    .line 915
     :cond_8
     const/16 v17, 0x0
 
@@ -1052,7 +1052,7 @@
 
     iput v0, v5, Lcom/android/server/wifi/WifiNative$BucketSettings;->num_channels:I
 
-    .line 910
+    .line 916
     iget-object v0, v5, Lcom/android/server/wifi/WifiNative$BucketSettings;->channels:[Lcom/android/server/wifi/WifiNative$ChannelSettings;
 
     move-object/from16 v17, v0
@@ -1073,7 +1073,7 @@
 
     iput v0, v5, Lcom/android/server/wifi/WifiNative$BucketSettings;->band:I
 
-    .line 912
+    .line 918
     const/16 v17, 0x0
 
     move/from16 v0, v17
@@ -1086,7 +1086,7 @@
 
     iput-object v0, v5, Lcom/android/server/wifi/WifiNative$BucketSettings;->channels:[Lcom/android/server/wifi/WifiNative$ChannelSettings;
 
-    .line 913
+    .line 919
     const-string v17, "WifiScanningService"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -1113,7 +1113,7 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 926
+    .line 932
     .end local v13    # "i$":I
     :cond_9
     iget v0, v5, Lcom/android/server/wifi/WifiNative$BucketSettings;->report_events:I
@@ -1132,7 +1132,7 @@
 
     if-ge v0, v1, :cond_d
 
-    .line 927
+    .line 933
     const-string v17, "WifiScanningService"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -1161,7 +1161,7 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 928
+    .line 934
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/net/wifi/WifiScanner$ScanSettings;->reportEvents:I
@@ -1172,11 +1172,11 @@
 
     iput v0, v5, Lcom/android/server/wifi/WifiNative$BucketSettings;->report_events:I
 
-    .line 933
+    .line 939
     :goto_5
     if-eqz v2, :cond_a
 
-    .line 934
+    .line 940
     sget-object v17, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mTimeBuckets:[Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer$TimeBucket;
 
     aget-object v17, v17, v6
@@ -1197,7 +1197,7 @@
 
     iput v0, v5, Lcom/android/server/wifi/WifiNative$BucketSettings;->period_ms:I
 
-    .line 935
+    .line 941
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
@@ -1218,7 +1218,7 @@
 
     iput v0, v1, Lcom/android/server/wifi/WifiNative$ScanSettings;->num_buckets:I
 
-    .line 938
+    .line 944
     :cond_a
     move-object/from16 v0, p0
 
@@ -1244,7 +1244,7 @@
 
     if-ge v0, v1, :cond_b
 
-    .line 939
+    .line 945
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
@@ -1263,7 +1263,7 @@
 
     iput v0, v1, Lcom/android/server/wifi/WifiNative$ScanSettings;->max_ap_per_scan:I
 
-    .line 942
+    .line 948
     :cond_b
     iget v0, v5, Lcom/android/server/wifi/WifiNative$BucketSettings;->period_ms:I
 
@@ -1271,7 +1271,7 @@
 
     goto/16 :goto_0
 
-    .line 915
+    .line 921
     .restart local v13    # "i$":I
     :cond_c
     invoke-virtual/range {v16 .. v16}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -1293,7 +1293,7 @@
 
     check-cast v8, Landroid/net/wifi/WifiScanner$ChannelSpec;
 
-    .line 917
+    .line 923
     .restart local v8    # "desiredChannelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     const-string v17, "WifiScanningService"
 
@@ -1321,7 +1321,7 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 919
+    .line 925
     iget-object v0, v5, Lcom/android/server/wifi/WifiNative$BucketSettings;->channels:[Lcom/android/server/wifi/WifiNative$ChannelSettings;
 
     move-object/from16 v17, v0
@@ -1332,7 +1332,7 @@
 
     aget-object v7, v17, v18
 
-    .line 920
+    .line 926
     .local v7, "channelSettings":Lcom/android/server/wifi/WifiNative$ChannelSettings;
     iget v0, v8, Landroid/net/wifi/WifiScanner$ChannelSpec;->frequency:I
 
@@ -1342,7 +1342,7 @@
 
     iput v0, v7, Lcom/android/server/wifi/WifiNative$ChannelSettings;->frequency:I
 
-    .line 921
+    .line 927
     iget v0, v5, Lcom/android/server/wifi/WifiNative$BucketSettings;->num_channels:I
 
     move/from16 v17, v0
@@ -1353,7 +1353,7 @@
 
     iput v0, v5, Lcom/android/server/wifi/WifiNative$BucketSettings;->num_channels:I
 
-    .line 922
+    .line 928
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mChannelToBucketMap:Ljava/util/HashMap;
@@ -1376,7 +1376,7 @@
 
     goto :goto_6
 
-    .line 930
+    .line 936
     .end local v7    # "channelSettings":Lcom/android/server/wifi/WifiNative$ChannelSettings;
     .end local v8    # "desiredChannelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     .end local v12    # "i$":Ljava/util/Iterator;
@@ -1416,10 +1416,10 @@
     .locals 5
 
     .prologue
-    .line 950
+    .line 956
     const/4 v1, 0x0
 
-    .line 951
+    .line 957
     .local v1, "num_buckets":I
     const/4 v0, 0x0
 
@@ -1433,7 +1433,7 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 952
+    .line 958
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
 
     iget-object v2, v2, Lcom/android/server/wifi/WifiNative$ScanSettings;->buckets:[Lcom/android/server/wifi/WifiNative$BucketSettings;
@@ -1454,7 +1454,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 954
+    .line 960
     :cond_0
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
 
@@ -1468,16 +1468,16 @@
 
     aput-object v3, v2, v1
 
-    .line 955
+    .line 961
     add-int/lit8 v1, v1, 0x1
 
-    .line 951
+    .line 957
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 959
+    .line 965
     :cond_2
     move v0, v1
 
@@ -1490,7 +1490,7 @@
 
     if-ge v0, v2, :cond_3
 
-    .line 960
+    .line 966
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
 
     iget-object v2, v2, Lcom/android/server/wifi/WifiNative$ScanSettings;->buckets:[Lcom/android/server/wifi/WifiNative$BucketSettings;
@@ -1499,21 +1499,21 @@
 
     aput-object v3, v2, v0
 
-    .line 959
+    .line 965
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 963
+    .line 969
     :cond_3
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
 
     iput v1, v2, Lcom/android/server/wifi/WifiNative$ScanSettings;->num_buckets:I
 
-    .line 964
+    .line 970
     if-eqz v1, :cond_4
 
-    .line 965
+    .line 971
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
 
     iget-object v3, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
@@ -1528,7 +1528,7 @@
 
     iput v3, v2, Lcom/android/server/wifi/WifiNative$ScanSettings;->base_period_ms:I
 
-    .line 967
+    .line 973
     :cond_4
     return-void
 .end method
@@ -1537,7 +1537,7 @@
     .locals 1
 
     .prologue
-    .line 946
+    .line 952
     iget-object v0, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->mSettings:Lcom/android/server/wifi/WifiNative$ScanSettings;
 
     return-object v0
@@ -1548,9 +1548,9 @@
     .param p1, "settings"    # Landroid/net/wifi/WifiScanner$ScanSettings;
 
     .prologue
-    .line 853
+    .line 859
     invoke-direct {p0, p1}, Lcom/android/server/wifi/WifiScanningServiceImpl$SettingsComputer;->getBestBucket(Landroid/net/wifi/WifiScanner$ScanSettings;)I
 
-    .line 854
+    .line 860
     return-void
 .end method

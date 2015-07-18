@@ -27,13 +27,13 @@
     .param p5, "ws"    # Landroid/os/WorkSource;
 
     .prologue
-    .line 1404
+    .line 1448
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$WifiLock;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
-    .line 1405
+    .line 1449
     invoke-direct/range {p0 .. p5}, Lcom/android/server/wifi/WifiServiceImpl$DeathRecipient;-><init>(Lcom/android/server/wifi/WifiServiceImpl;ILjava/lang/String;Landroid/os/IBinder;Landroid/os/WorkSource;)V
 
-    .line 1406
+    .line 1450
     return-void
 .end method
 
@@ -43,14 +43,14 @@
     .locals 3
 
     .prologue
-    .line 1409
+    .line 1453
     iget-object v0, p0, Lcom/android/server/wifi/WifiServiceImpl$WifiLock;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     iget-object v1, v0, Lcom/android/server/wifi/WifiServiceImpl;->mLocks:Lcom/android/server/wifi/WifiServiceImpl$LockList;
 
     monitor-enter v1
 
-    .line 1410
+    .line 1454
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiServiceImpl$WifiLock;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
@@ -59,13 +59,13 @@
     # invokes: Lcom/android/server/wifi/WifiServiceImpl;->releaseWifiLockLocked(Landroid/os/IBinder;)Z
     invoke-static {v0, v2}, Lcom/android/server/wifi/WifiServiceImpl;->access$800(Lcom/android/server/wifi/WifiServiceImpl;Landroid/os/IBinder;)Z
 
-    .line 1411
+    .line 1455
     monitor-exit v1
 
-    .line 1412
+    .line 1456
     return-void
 
-    .line 1411
+    .line 1455
     :catchall_0
     move-exception v0
 
@@ -80,7 +80,7 @@
     .locals 2
 
     .prologue
-    .line 1415
+    .line 1459
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

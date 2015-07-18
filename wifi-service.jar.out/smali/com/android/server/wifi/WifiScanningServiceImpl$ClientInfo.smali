@@ -101,14 +101,14 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mScanPeriods:Ljava/util/HashMap;
 
-    .line 602
+    .line 605
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mHotlistSettings:Ljava/util/HashMap;
 
-    .line 657
+    .line 663
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -166,7 +166,7 @@
     .param p2, "handler"    # I
 
     .prologue
-    .line 606
+    .line 609
     iget-object v0, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mHotlistSettings:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -175,7 +175,7 @@
 
     invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 607
+    .line 610
     return-void
 .end method
 
@@ -203,7 +203,7 @@
     .param p1, "handler"    # I
 
     .prologue
-    .line 659
+    .line 665
     iget-object v0, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mSignificantWifiHandlers:Ljava/util/HashSet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -212,7 +212,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 660
+    .line 666
     return-void
 .end method
 
@@ -220,27 +220,27 @@
     .locals 5
 
     .prologue
-    .line 693
+    .line 699
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mScanSettings:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->clear()V
 
-    .line 694
+    .line 700
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->this$0:Lcom/android/server/wifi/WifiScanningServiceImpl;
 
     invoke-virtual {v2}, Lcom/android/server/wifi/WifiScanningServiceImpl;->resetBuckets()Z
 
-    .line 696
+    .line 702
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mHotlistSettings:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->clear()V
 
-    .line 697
+    .line 703
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->this$0:Lcom/android/server/wifi/WifiScanningServiceImpl;
 
     invoke-virtual {v2}, Lcom/android/server/wifi/WifiScanningServiceImpl;->resetHotlist()V
 
-    .line 699
+    .line 705
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mSignificantWifiHandlers:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -261,7 +261,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 700
+    .line 706
     .local v0, "handler":Ljava/lang/Integer;
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->this$0:Lcom/android/server/wifi/WifiScanningServiceImpl;
 
@@ -273,14 +273,14 @@
 
     goto :goto_0
 
-    .line 703
+    .line 709
     .end local v0    # "handler":Ljava/lang/Integer;
     :cond_0
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mSignificantWifiHandlers:Ljava/util/HashSet;
 
     invoke-virtual {v2}, Ljava/util/HashSet;->clear()V
 
-    .line 704
+    .line 710
     const-string v2, "WifiScanningService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -303,7 +303,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 705
+    .line 711
     return-void
 .end method
 
@@ -313,12 +313,12 @@
     .param p2, "results"    # [Landroid/net/wifi/ScanResult;
 
     .prologue
-    .line 561
+    .line 564
     new-instance v0, Landroid/net/wifi/WifiScanner$ParcelableScanResults;
 
     invoke-direct {v0, p2}, Landroid/net/wifi/WifiScanner$ParcelableScanResults;-><init>([Landroid/net/wifi/ScanResult;)V
 
-    .line 563
+    .line 566
     .local v0, "parcelableScanResults":Landroid/net/wifi/WifiScanner$ParcelableScanResults;
     iget-object v1, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mChannel:Lcom/android/internal/util/AsyncChannel;
 
@@ -328,7 +328,7 @@
 
     invoke-virtual {v1, v2, v3, p1, v0}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 564
+    .line 567
     return-void
 .end method
 
@@ -345,7 +345,7 @@
     .end annotation
 
     .prologue
-    .line 614
+    .line 617
     iget-object v0, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mHotlistSettings:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -421,7 +421,7 @@
     .end annotation
 
     .prologue
-    .line 667
+    .line 673
     iget-object v0, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mSignificantWifiHandlers:Ljava/util/HashSet;
 
     return-object v0
@@ -432,7 +432,7 @@
     .param p1, "handler"    # I
 
     .prologue
-    .line 610
+    .line 613
     iget-object v0, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mHotlistSettings:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -441,7 +441,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 611
+    .line 614
     return-void
 .end method
 
@@ -468,7 +468,7 @@
     .param p1, "handler"    # I
 
     .prologue
-    .line 663
+    .line 669
     iget-object v0, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mSignificantWifiHandlers:Ljava/util/HashSet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -477,7 +477,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 664
+    .line 670
     return-void
 .end method
 
@@ -486,7 +486,7 @@
     .param p1, "result"    # Landroid/net/wifi/ScanResult;
 
     .prologue
-    .line 567
+    .line 570
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mScanSettings:Ljava/util/HashMap;
@@ -499,7 +499,7 @@
 
     move-result-object v15
 
-    .line 568
+    .line 571
     .local v15, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_0
     invoke-interface {v15}, Ljava/util/Iterator;->hasNext()Z
@@ -508,7 +508,7 @@
 
     if-eqz v4, :cond_4
 
-    .line 569
+    .line 572
     invoke-interface {v15}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
@@ -519,7 +519,7 @@
 
     move-result v13
 
-    .line 570
+    .line 573
     .local v13, "handler":I
     move-object/from16 v0, p0
 
@@ -535,13 +535,13 @@
 
     check-cast v17, Landroid/net/wifi/WifiScanner$ScanSettings;
 
-    .line 571
+    .line 574
     .local v17, "settings":Landroid/net/wifi/WifiScanner$ScanSettings;
     move-object/from16 v0, v17
 
     iget-object v12, v0, Landroid/net/wifi/WifiScanner$ScanSettings;->channels:[Landroid/net/wifi/WifiScanner$ChannelSpec;
 
-    .line 572
+    .line 575
     .local v12, "desiredChannels":[Landroid/net/wifi/WifiScanner$ChannelSpec;
     move-object/from16 v0, v17
 
@@ -555,7 +555,7 @@
 
     if-nez v4, :cond_2
 
-    .line 574
+    .line 577
     :cond_1
     move-object/from16 v0, v17
 
@@ -566,7 +566,7 @@
 
     move-result-object v12
 
-    .line 576
+    .line 579
     :cond_2
     move-object v10, v12
 
@@ -586,7 +586,7 @@
 
     aget-object v11, v10, v14
 
-    .line 577
+    .line 580
     .local v11, "channelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     iget v4, v11, Landroid/net/wifi/WifiScanner$ChannelSpec;->frequency:I
 
@@ -596,7 +596,7 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 578
+    .line 581
     move-object/from16 v0, p1
 
     iget-object v4, v0, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
@@ -605,7 +605,7 @@
 
     move-result-object v3
 
-    .line 579
+    .line 582
     .local v3, "wifiSsid":Landroid/net/wifi/WifiSsid;
     new-instance v2, Landroid/net/wifi/ScanResult;
 
@@ -629,7 +629,7 @@
 
     invoke-direct/range {v2 .. v9}, Landroid/net/wifi/ScanResult;-><init>(Landroid/net/wifi/WifiSsid;Ljava/lang/String;Ljava/lang/String;IIJ)V
 
-    .line 581
+    .line 584
     .local v2, "newResult":Landroid/net/wifi/ScanResult;
     const-string v4, "WifiScanningService"
 
@@ -653,7 +653,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 582
+    .line 585
     move-object/from16 v0, p1
 
     iget-object v4, v0, Landroid/net/wifi/ScanResult;->informationElements:[Landroid/net/wifi/ScanResult$InformationElement;
@@ -666,7 +666,7 @@
 
     iput-object v4, v2, Landroid/net/wifi/ScanResult;->informationElements:[Landroid/net/wifi/ScanResult$InformationElement;
 
-    .line 583
+    .line 586
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mChannel:Lcom/android/internal/util/AsyncChannel;
@@ -677,7 +677,7 @@
 
     invoke-virtual {v4, v5, v6, v13, v2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 576
+    .line 579
     .end local v2    # "newResult":Landroid/net/wifi/ScanResult;
     .end local v3    # "wifiSsid":Landroid/net/wifi/WifiSsid;
     :cond_3
@@ -685,7 +685,7 @@
 
     goto :goto_0
 
-    .line 588
+    .line 591
     .end local v10    # "arr$":[Landroid/net/wifi/WifiScanner$ChannelSpec;
     .end local v11    # "channelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     .end local v12    # "desiredChannels":[Landroid/net/wifi/WifiScanner$ChannelSpec;
@@ -702,7 +702,7 @@
     .param p1, "results"    # [Landroid/net/wifi/ScanResult;
 
     .prologue
-    .line 618
+    .line 621
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mHotlistSettings:Ljava/util/HashMap;
@@ -717,7 +717,7 @@
 
     move-result-object v11
 
-    .line 620
+    .line 623
     .local v11, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/Integer;Landroid/net/wifi/WifiScanner$HotlistSettings;>;>;"
     :goto_0
     invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
@@ -726,14 +726,14 @@
 
     if-eqz v19, :cond_3
 
-    .line 621
+    .line 624
     invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Ljava/util/Map$Entry;
 
-    .line 622
+    .line 625
     .local v6, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Landroid/net/wifi/WifiScanner$HotlistSettings;>;"
     invoke-interface {v6}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -745,7 +745,7 @@
 
     move-result v7
 
-    .line 623
+    .line 626
     .local v7, "handler":I
     invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -753,12 +753,15 @@
 
     check-cast v18, Landroid/net/wifi/WifiScanner$HotlistSettings;
 
-    .line 624
+    .line 627
     .local v18, "settings":Landroid/net/wifi/WifiScanner$HotlistSettings;
     const/4 v14, 0x0
 
-    .line 625
+    .line 629
     .local v14, "num_results":I
+    if-eqz p1, :cond_2
+
+    .line 630
     move-object/from16 v4, p1
 
     .local v4, "arr$":[Landroid/net/wifi/ScanResult;
@@ -779,7 +782,7 @@
 
     aget-object v16, v4, v9
 
-    .line 626
+    .line 631
     .local v16, "result":Landroid/net/wifi/ScanResult;
     move-object/from16 v0, v18
 
@@ -798,7 +801,7 @@
 
     aget-object v3, v5, v8
 
-    .line 627
+    .line 632
     .local v3, "BssidInfo":Landroid/net/wifi/WifiScanner$BssidInfo;
     move-object/from16 v0, v16
 
@@ -816,10 +819,10 @@
 
     if-eqz v19, :cond_1
 
-    .line 628
+    .line 633
     add-int/lit8 v14, v14, 0x1
 
-    .line 625
+    .line 630
     .end local v3    # "BssidInfo":Landroid/net/wifi/WifiScanner$BssidInfo;
     :cond_0
     add-int/lit8 v8, v9, 0x1
@@ -830,7 +833,7 @@
     .restart local v9    # "i$":I
     goto :goto_1
 
-    .line 626
+    .line 631
     .end local v9    # "i$":I
     .restart local v3    # "BssidInfo":Landroid/net/wifi/WifiScanner$BssidInfo;
     .restart local v8    # "i$":I
@@ -839,29 +842,26 @@
 
     goto :goto_2
 
-    .line 634
+    .line 640
     .end local v3    # "BssidInfo":Landroid/net/wifi/WifiScanner$BssidInfo;
     .end local v5    # "arr$":[Landroid/net/wifi/WifiScanner$BssidInfo;
     .end local v8    # "i$":I
     .end local v13    # "len$":I
     .end local v16    # "result":Landroid/net/wifi/ScanResult;
-    .restart local v9    # "i$":I
     :cond_2
     if-nez v14, :cond_4
 
-    .line 655
+    .line 661
     .end local v6    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Landroid/net/wifi/WifiScanner$HotlistSettings;>;"
     .end local v7    # "handler":I
-    .end local v9    # "i$":I
     .end local v14    # "num_results":I
     .end local v18    # "settings":Landroid/net/wifi/WifiScanner$HotlistSettings;
     :cond_3
     return-void
 
-    .line 639
+    .line 645
     .restart local v6    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Landroid/net/wifi/WifiScanner$HotlistSettings;>;"
     .restart local v7    # "handler":I
-    .restart local v9    # "i$":I
     .restart local v14    # "num_results":I
     .restart local v18    # "settings":Landroid/net/wifi/WifiScanner$HotlistSettings;
     :cond_4
@@ -869,11 +869,11 @@
 
     move-object/from16 v17, v0
 
-    .line 640
+    .line 646
     .local v17, "results2":[Landroid/net/wifi/ScanResult;
     const/4 v10, 0x0
 
-    .line 641
+    .line 647
     .local v10, "index":I
     move-object/from16 v4, p1
 
@@ -883,7 +883,6 @@
     .restart local v12    # "len$":I
     const/4 v8, 0x0
 
-    .end local v9    # "i$":I
     .restart local v8    # "i$":I
     move v9, v8
 
@@ -896,7 +895,7 @@
 
     aget-object v16, v4, v9
 
-    .line 642
+    .line 648
     .restart local v16    # "result":Landroid/net/wifi/ScanResult;
     move-object/from16 v0, v18
 
@@ -915,7 +914,7 @@
 
     aget-object v3, v5, v8
 
-    .line 643
+    .line 649
     .restart local v3    # "BssidInfo":Landroid/net/wifi/WifiScanner$BssidInfo;
     move-object/from16 v0, v16
 
@@ -933,19 +932,19 @@
 
     if-eqz v19, :cond_5
 
-    .line 644
+    .line 650
     aput-object v16, v17, v10
 
-    .line 645
+    .line 651
     add-int/lit8 v10, v10, 0x1
 
-    .line 642
+    .line 648
     :cond_5
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_4
 
-    .line 641
+    .line 647
     .end local v3    # "BssidInfo":Landroid/net/wifi/WifiScanner$BssidInfo;
     :cond_6
     add-int/lit8 v8, v9, 0x1
@@ -956,7 +955,7 @@
     .restart local v9    # "i$":I
     goto :goto_3
 
-    .line 650
+    .line 656
     .end local v5    # "arr$":[Landroid/net/wifi/WifiScanner$BssidInfo;
     .end local v13    # "len$":I
     .end local v16    # "result":Landroid/net/wifi/ScanResult;
@@ -967,7 +966,7 @@
 
     invoke-direct {v15, v0}, Landroid/net/wifi/WifiScanner$ParcelableScanResults;-><init>([Landroid/net/wifi/ScanResult;)V
 
-    .line 653
+    .line 659
     .local v15, "parcelableScanResults":Landroid/net/wifi/WifiScanner$ParcelableScanResults;
     move-object/from16 v0, p0
 
@@ -997,7 +996,7 @@
     .param p3, "newPeriodInMs"    # I
 
     .prologue
-    .line 591
+    .line 594
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mScanPeriods:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1010,31 +1009,31 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 592
+    .line 595
     .local v1, "prevPeriodObject":Ljava/lang/Integer;
     iget v0, p2, Landroid/net/wifi/WifiScanner$ScanSettings;->periodInMs:I
 
-    .line 593
+    .line 596
     .local v0, "prevPeriodInMs":I
     if-eqz v1, :cond_0
 
-    .line 594
+    .line 597
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    .line 597
+    .line 600
     :cond_0
     if-eq v0, p3, :cond_1
 
-    .line 598
+    .line 601
     iget-object v2, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mChannel:Lcom/android/internal/util/AsyncChannel;
 
     const v3, 0x27013
 
     invoke-virtual {v2, v3, p3, p1}, Lcom/android/internal/util/AsyncChannel;->sendMessage(III)V
 
-    .line 600
+    .line 603
     :cond_1
     return-void
 .end method
@@ -1143,8 +1142,11 @@
     :cond_1
     const/16 v21, 0x0
 
-    .line 528
+    .line 529
     .local v21, "num_results":I
+    if-eqz p1, :cond_4
+
+    .line 530
     move-object/from16 v12, p1
 
     .local v12, "arr$":[Landroid/net/wifi/ScanResult;
@@ -1171,7 +1173,7 @@
 
     aget-object v22, v12, v17
 
-    .line 529
+    .line 531
     .local v22, "result":Landroid/net/wifi/ScanResult;
     move-object v13, v15
 
@@ -1194,7 +1196,7 @@
 
     aget-object v14, v13, v16
 
-    .line 530
+    .line 532
     .local v14, "channelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     iget v6, v14, Landroid/net/wifi/WifiScanner$ChannelSpec;->frequency:I
 
@@ -1204,10 +1206,10 @@
 
     if-ne v6, v7, :cond_3
 
-    .line 531
+    .line 533
     add-int/lit8 v21, v21, 0x1
 
-    .line 528
+    .line 530
     .end local v14    # "channelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     :cond_2
     add-int/lit8 v16, v17, 0x1
@@ -1218,7 +1220,7 @@
     .restart local v17    # "i$":I
     goto :goto_0
 
-    .line 529
+    .line 531
     .end local v17    # "i$":I
     .restart local v14    # "channelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     .restart local v16    # "i$":I
@@ -1227,21 +1229,20 @@
 
     goto :goto_1
 
-    .line 537
+    .line 540
     .end local v13    # "arr$":[Landroid/net/wifi/WifiScanner$ChannelSpec;
     .end local v14    # "channelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     .end local v16    # "i$":I
     .end local v20    # "len$":I
     .end local v22    # "result":Landroid/net/wifi/ScanResult;
-    .restart local v17    # "i$":I
     :cond_4
     if-nez v21, :cond_5
 
-    .line 558
+    .line 561
     :goto_2
     return-void
 
-    .line 542
+    .line 545
     :cond_5
     move/from16 v0, v21
 
@@ -1249,11 +1250,11 @@
 
     move-object/from16 v23, v0
 
-    .line 543
+    .line 546
     .local v23, "results2":[Landroid/net/wifi/ScanResult;
     const/16 v18, 0x0
 
-    .line 544
+    .line 547
     .local v18, "index":I
     move-object/from16 v12, p1
 
@@ -1265,7 +1266,6 @@
     .restart local v19    # "len$":I
     const/16 v16, 0x0
 
-    .end local v17    # "i$":I
     .restart local v16    # "i$":I
     move/from16 v17, v16
 
@@ -1282,7 +1282,7 @@
 
     aget-object v22, v12, v17
 
-    .line 545
+    .line 548
     .restart local v22    # "result":Landroid/net/wifi/ScanResult;
     move-object v13, v15
 
@@ -1305,7 +1305,7 @@
 
     aget-object v14, v13, v16
 
-    .line 546
+    .line 549
     .restart local v14    # "channelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     iget v6, v14, Landroid/net/wifi/WifiScanner$ChannelSpec;->frequency:I
 
@@ -1315,7 +1315,7 @@
 
     if-ne v6, v7, :cond_7
 
-    .line 547
+    .line 550
     move-object/from16 v0, v22
 
     iget-object v6, v0, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
@@ -1324,7 +1324,7 @@
 
     move-result-object v5
 
-    .line 548
+    .line 551
     .local v5, "wifiSsid":Landroid/net/wifi/WifiSsid;
     new-instance v4, Landroid/net/wifi/ScanResult;
 
@@ -1348,14 +1348,14 @@
 
     invoke-direct/range {v4 .. v11}, Landroid/net/wifi/ScanResult;-><init>(Landroid/net/wifi/WifiSsid;Ljava/lang/String;Ljava/lang/String;IIJ)V
 
-    .line 550
+    .line 553
     .local v4, "newResult":Landroid/net/wifi/ScanResult;
     aput-object v4, v23, v18
 
-    .line 551
+    .line 554
     add-int/lit8 v18, v18, 0x1
 
-    .line 544
+    .line 547
     .end local v4    # "newResult":Landroid/net/wifi/ScanResult;
     .end local v5    # "wifiSsid":Landroid/net/wifi/WifiSsid;
     .end local v14    # "channelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
@@ -1368,7 +1368,7 @@
     .restart local v17    # "i$":I
     goto :goto_3
 
-    .line 545
+    .line 548
     .end local v17    # "i$":I
     .restart local v14    # "channelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     .restart local v16    # "i$":I
@@ -1377,7 +1377,7 @@
 
     goto :goto_4
 
-    .line 557
+    .line 560
     .end local v13    # "arr$":[Landroid/net/wifi/WifiScanner$ChannelSpec;
     .end local v14    # "channelSpec":Landroid/net/wifi/WifiScanner$ChannelSpec;
     .end local v16    # "i$":I
@@ -1401,12 +1401,12 @@
     .param p1, "results"    # [Landroid/net/wifi/ScanResult;
 
     .prologue
-    .line 671
+    .line 677
     new-instance v2, Landroid/net/wifi/WifiScanner$ParcelableScanResults;
 
     invoke-direct {v2, p1}, Landroid/net/wifi/WifiScanner$ParcelableScanResults;-><init>([Landroid/net/wifi/ScanResult;)V
 
-    .line 673
+    .line 679
     .local v2, "parcelableScanResults":Landroid/net/wifi/WifiScanner$ParcelableScanResults;
     iget-object v3, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mSignificantWifiHandlers:Ljava/util/HashSet;
 
@@ -1414,7 +1414,7 @@
 
     move-result-object v1
 
-    .line 674
+    .line 680
     .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -1423,7 +1423,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 675
+    .line 681
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
@@ -1434,7 +1434,7 @@
 
     move-result v0
 
-    .line 676
+    .line 682
     .local v0, "handler":I
     iget-object v3, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mChannel:Lcom/android/internal/util/AsyncChannel;
 
@@ -1446,7 +1446,7 @@
 
     goto :goto_0
 
-    .line 679
+    .line 685
     .end local v0    # "handler":I
     :cond_0
     return-void
@@ -1457,12 +1457,12 @@
     .param p1, "results"    # [Landroid/net/wifi/ScanResult;
 
     .prologue
-    .line 682
+    .line 688
     new-instance v2, Landroid/net/wifi/WifiScanner$ParcelableScanResults;
 
     invoke-direct {v2, p1}, Landroid/net/wifi/WifiScanner$ParcelableScanResults;-><init>([Landroid/net/wifi/ScanResult;)V
 
-    .line 684
+    .line 690
     .local v2, "parcelableScanResults":Landroid/net/wifi/WifiScanner$ParcelableScanResults;
     iget-object v3, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mSignificantWifiHandlers:Ljava/util/HashSet;
 
@@ -1470,7 +1470,7 @@
 
     move-result-object v1
 
-    .line 685
+    .line 691
     .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -1479,7 +1479,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 686
+    .line 692
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
@@ -1490,7 +1490,7 @@
 
     move-result v0
 
-    .line 687
+    .line 693
     .local v0, "handler":I
     iget-object v3, p0, Lcom/android/server/wifi/WifiScanningServiceImpl$ClientInfo;->mChannel:Lcom/android/internal/util/AsyncChannel;
 
@@ -1502,7 +1502,7 @@
 
     goto :goto_0
 
-    .line 690
+    .line 696
     .end local v0    # "handler":I
     :cond_0
     return-void

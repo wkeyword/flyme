@@ -36,10 +36,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 425
+    .line 429
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$BatchedScanRequest;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
-    .line 426
+    .line 430
     const/4 v2, 0x0
 
     move-object v0, p0
@@ -52,27 +52,27 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/wifi/WifiServiceImpl$DeathRecipient;-><init>(Lcom/android/server/wifi/WifiServiceImpl;ILjava/lang/String;Landroid/os/IBinder;Landroid/os/WorkSource;)V
 
-    .line 427
+    .line 431
     iput-object p2, p0, Lcom/android/server/wifi/WifiServiceImpl$BatchedScanRequest;->settings:Landroid/net/wifi/BatchedScanSettings;
 
-    .line 428
+    .line 432
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/wifi/WifiServiceImpl$BatchedScanRequest;->uid:I
 
-    .line 429
+    .line 433
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/wifi/WifiServiceImpl$BatchedScanRequest;->pid:I
 
-    .line 430
+    .line 434
     iput-object p4, p0, Lcom/android/server/wifi/WifiServiceImpl$BatchedScanRequest;->workSource:Landroid/os/WorkSource;
 
-    .line 431
+    .line 435
     return-void
 .end method
 
@@ -82,7 +82,7 @@
     .locals 4
 
     .prologue
-    .line 433
+    .line 437
     iget-object v0, p0, Lcom/android/server/wifi/WifiServiceImpl$BatchedScanRequest;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     iget-object v1, p0, Lcom/android/server/wifi/WifiServiceImpl$BatchedScanRequest;->settings:Landroid/net/wifi/BatchedScanSettings;
@@ -94,7 +94,7 @@
     # invokes: Lcom/android/server/wifi/WifiServiceImpl;->stopBatchedScan(Landroid/net/wifi/BatchedScanSettings;II)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/wifi/WifiServiceImpl;->access$600(Lcom/android/server/wifi/WifiServiceImpl;Landroid/net/wifi/BatchedScanSettings;II)V
 
-    .line 434
+    .line 438
     return-void
 .end method
 
@@ -104,7 +104,7 @@
     .param p2, "pid"    # I
 
     .prologue
-    .line 440
+    .line 444
     iget v0, p0, Lcom/android/server/wifi/WifiServiceImpl$BatchedScanRequest;->uid:I
 
     if-ne v0, p1, :cond_0
@@ -128,7 +128,7 @@
     .locals 2
 
     .prologue
-    .line 436
+    .line 440
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

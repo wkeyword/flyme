@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 871
+    .line 909
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$1;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,17 +36,18 @@
 
 
 # virtual methods
-.method public update()V
+.method public update(Landroid/net/LinkProperties;)V
     .locals 2
+    .param p1, "lp"    # Landroid/net/LinkProperties;
 
     .prologue
-    .line 873
+    .line 911
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$1;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     const v1, 0x2008c
 
-    invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(I)V
+    invoke-virtual {v0, v1, p1}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(ILjava/lang/Object;)V
 
-    .line 874
+    .line 912
     return-void
 .end method

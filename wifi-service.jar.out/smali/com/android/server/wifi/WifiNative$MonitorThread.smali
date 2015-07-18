@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 1142
+    .line 1158
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
     .param p1, "x0"    # Lcom/android/server/wifi/WifiNative$1;
 
     .prologue
-    .line 1142
+    .line 1158
     invoke-direct {p0}, Lcom/android/server/wifi/WifiNative$MonitorThread;-><init>()V
 
     return-void
@@ -42,7 +42,7 @@
     .locals 4
 
     .prologue
-    .line 1144
+    .line 1160
     const-string v0, "WifiNative-HAL"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -74,10 +74,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1145
+    .line 1161
     # invokes: Lcom/android/server/wifi/WifiNative;->waitForHalEventNative()V
     invoke-static {}, Lcom/android/server/wifi/WifiNative;->access$100()V
 
-    .line 1146
+    .line 1162
     return-void
 .end method

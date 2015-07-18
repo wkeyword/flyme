@@ -27,13 +27,13 @@
     .param p5, "f"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 4457
+    .line 4598
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$WifiNetworkFactory;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
-    .line 4458
+    .line 4599
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/net/NetworkFactory;-><init>(Landroid/os/Looper;Landroid/content/Context;Ljava/lang/String;Landroid/net/NetworkCapabilities;)V
 
-    .line 4459
+    .line 4600
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .locals 0
 
     .prologue
-    .line 4463
+    .line 4604
     return-void
 .end method
 
@@ -51,6 +51,6 @@
     .locals 0
 
     .prologue
-    .line 4467
+    .line 4608
     return-void
 .end method
