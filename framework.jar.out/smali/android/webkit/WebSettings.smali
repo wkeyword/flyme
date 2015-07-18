@@ -2274,7 +2274,7 @@
 
 .method public declared-synchronized setPrivateBrowsingEnabled(Z)V
     .locals 1
-    .param p1, "flag"    # Z
+    .param p1, "enabled"    # Z
 
     .prologue
     return-void
@@ -2282,7 +2282,22 @@
 
 .method public declared-synchronized setNightModeEnabled(Z)V
     .locals 1
-    .param p1, "flag"    # Z
+    .param p1, "enabled"    # Z
+
+    .prologue
+    return-void
+.end method
+
+.method public declared-synchronized setTextDegree(I)V
+    .locals 1
+    .param p1, "degree"    # I
+
+    .prologue
+    return-void
+.end method
+
+.method public declared-synchronized getTextDegree()I
+    .locals 1
 
     .prologue
     return-void
