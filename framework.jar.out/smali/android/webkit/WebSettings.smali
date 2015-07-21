@@ -2300,5 +2300,21 @@
     .locals 1
 
     .prologue
-    return-void
+    monitor-enter p0
+
+    :try_start_0
+    new-instance v0, Landroid/webkit/MustOverrideException;
+
+    invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
+
+    throw v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method
