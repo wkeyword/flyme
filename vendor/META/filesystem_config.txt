@@ -141,6 +141,10 @@ system/bin/appwidget 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0
 system/bin/atrace 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/auditd 0 2000 755 selabel=u:object_r:logd_exec:s0 capabilities=0x0
 system/bin/bcc 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/bin/bcm4334.hcd 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/bin/bcm4334_murata.hcd 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/bin/bcm4334_semco.hcd 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/bin/bcm4334_semcosh.hcd 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/bdt 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/blkid 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/bmgr 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -361,7 +365,7 @@ system/etc/init.d 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/init.d/80cfw 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/init.d/90userinit 0 2000 755 selabel=u:object_r:userinit_exec:s0 capabilities=0x0
 system/etc/init.d/98netflix 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/etc/init.d/99SuperSUDaemon 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/etc/init.d/99SuperSUDaemon 0 0 744 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/.installed_su_daemon 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/install-recovery_original.sh 0 0 544 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/install-recovery.sh 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -856,6 +860,7 @@ system/lib/hw/nfc.exynos4.so 0 0 644 selabel=u:object_r:system_file:s0 capabilit
 system/lib/hw/power.default.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/hw/sensors.smdk4x12.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/hw/vibrator.default.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/lib/libakm.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libandroidfw.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libandroid_runtime.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libandroid_servers.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1565,10 +1570,6 @@ system/usr/share/zoneinfo 0 0 755 selabel=u:object_r:system_file:s0 capabilities
 system/usr/share/zoneinfo/tzdata 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/firmware 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/vendor/firmware/bluetooth 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/vendor/firmware/bluetooth/bcm4334.hcd 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/vendor/firmware/bluetooth/bcm4334_murata.hcd 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/vendor/firmware/bluetooth/bcm4334_semcosh.hcd 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/firmware/fimc_is_fw.bin 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/firmware/mfc_fw.bin 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/firmware/setfile.bin 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
