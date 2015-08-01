@@ -139,7 +139,7 @@ override_property += \
 override_property += \
     ro.flyme.romer=ZBDXY \
     ro.flyme.version.code=1 \
-    ro.build.display.id=Flyme OS 4.5.1.1E
+    ro.build.display.id=Flyme OS 4.5.1.2A
 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
