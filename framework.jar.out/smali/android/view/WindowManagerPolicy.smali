@@ -249,6 +249,9 @@
 .method public abstract lockNow(Landroid/os/Bundle;)V
 .end method
 
+.method public abstract mzInterceptMotionBeforeQueueing(Landroid/view/MotionEvent;I)I
+.end method
+
 .method public abstract needsNavigationBar()Z
 .end method
 

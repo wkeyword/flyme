@@ -30,6 +30,9 @@
 .method public abstract interceptMotionBeforeQueueingNonInteractive(JI)I
 .end method
 
+.method public abstract mzInterceptMotionBeforeQueueing(Landroid/view/MotionEvent;I)I
+.end method
+
 .method public abstract notifyANR(Lcom/android/server/input/InputApplicationHandle;Lcom/android/server/input/InputWindowHandle;Ljava/lang/String;)J
 .end method
 

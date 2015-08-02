@@ -521,6 +521,24 @@
     return v0
 .end method
 
+.method public mzInterceptMotionBeforeQueueing(Landroid/view/MotionEvent;I)I
+    .locals 1
+    .param p1, "event"    # Landroid/view/MotionEvent;
+    .param p2, "policyFlags"    # I
+
+    .prologue
+    .line 501
+    iget-object v0, p0, Lcom/android/server/wm/InputMonitor;->mService:Lcom/android/server/wm/WindowManagerService;
+
+    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
+
+    invoke-interface {v0, p1, p2}, Landroid/view/WindowManagerPolicy;->mzInterceptMotionBeforeQueueing(Landroid/view/MotionEvent;I)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public notifyANR(Lcom/android/server/input/InputApplicationHandle;Lcom/android/server/input/InputWindowHandle;Ljava/lang/String;)J
     .locals 13
     .param p1, "inputApplicationHandle"    # Lcom/android/server/input/InputApplicationHandle;

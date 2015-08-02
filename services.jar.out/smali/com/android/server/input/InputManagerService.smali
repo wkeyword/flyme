@@ -2479,6 +2479,22 @@
     return v0
 .end method
 
+.method private mzInterceptMotionBeforeQueueing(Landroid/view/MotionEvent;I)I
+    .locals 1
+    .param p1, "event"    # Landroid/view/MotionEvent;
+    .param p2, "policyFlags"    # I
+
+    .prologue
+    .line 1947
+    iget-object v0, p0, Lcom/android/server/input/InputManagerService;->mWindowManagerCallbacks:Lcom/android/server/input/InputManagerService$WindowManagerCallbacks;
+
+    invoke-interface {v0, p1, p2}, Lcom/android/server/input/InputManagerService$WindowManagerCallbacks;->mzInterceptMotionBeforeQueueing(Landroid/view/MotionEvent;I)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method private static native nativeCancelVibrate(JII)V
 .end method
 
