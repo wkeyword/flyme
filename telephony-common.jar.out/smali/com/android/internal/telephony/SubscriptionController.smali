@@ -1144,6 +1144,36 @@
     iput v2, v0, Landroid/telephony/SubInfoRecord;->mnc:I
 
     .line 342
+    const-string v2, "sub_state"
+
+    #invoke-interface {p1, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+
+    #move-result v2
+
+    #invoke-interface {p1, v2}, Landroid/database/Cursor;->getInt(I)I
+
+    #move-result v2
+
+    const/4 v2, 0x1
+
+    iput v2, v0, Landroid/telephony/SubInfoRecord;->mStatus:I
+
+    .line 344
+    const-string v2, "network_mode"
+
+    #invoke-interface {p1, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+
+    #move-result v2
+
+    #invoke-interface {p1, v2}, Landroid/database/Cursor;->getInt(I)I
+
+    #move-result v2
+
+    const/4 v2, -0x1
+
+    iput v2, v0, Landroid/telephony/SubInfoRecord;->mNwMode:I
+
+    .line 347
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -8109,6 +8139,41 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 1611
+    iget-object v1, p0, Lcom/android/internal/telephony/SubscriptionController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    sget-object v2, Landroid/telephony/SubscriptionManager;->CONTENT_URI:Landroid/net/Uri;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "_id="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    #invoke-virtual {v1, v2, v0, v3, v4}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+
+    .line 1613
     return-void
 .end method
 
@@ -8269,9 +8334,9 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v1, v2, v7, v3, v4}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    #invoke-virtual {v1, v2, v7, v3, v4}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    move-result v0
+    #move-result v0
 
     .line 1636
     .end local v7    # "value":Landroid/content/ContentValues;
