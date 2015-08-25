@@ -138,7 +138,7 @@ override_property += \
 # You should configure the property according to your ID, ie, replace "FlymeRomer" with your ID.
 override_property += \
     ro.flyme.romer=ZBDXY \
-    ro.flyme.version.code=1 \
+    ro.flyme.version.code=1
 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
